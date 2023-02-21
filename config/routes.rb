@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'tests#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :tests do
+
+    resources :questions, shallow: true, except: :index
+  end
 end
