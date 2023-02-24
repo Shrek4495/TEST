@@ -1,2 +1,9 @@
 <h1><%= @question.body %></h1>
+
+<h2>Answers</h2>
+<%= link_to "New_answer", new_question_answer_path(@question) %>
+
+
 <%= link_to  "Назад к тестам", tests_path, method: :get %>
+<%= link_to "Edit", edit_question_path(@question) %>
+
