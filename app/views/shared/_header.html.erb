@@ -1,6 +1,13 @@
 <header>
-  <h1>
-    <a href="/tests">Testguru</a>
-  </h1>
-  <p><a href="/tests">Все тесты </a></p>
+  <div class="title">
+    <%= link_to  'Testguru', tests_path, method: :get %>
+  </div>
+  <div class="right-nav-bar">
+    <% if logged_in? %>
+      <p>Добро пожаловать, <b><%= current_user.name %></b>|
+        <%= link_to  'Выйти', session_path(session), method: :delete %></p>
+    <% else %>
+      <%= link_to  'Зарегистрироваться', sign_up_path %>
+    <% end %>
+  </div>
 </header>

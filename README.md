@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.0.0
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Database creation 
 
 * Database initialization
 
