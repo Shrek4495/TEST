@@ -1,0 +1,11 @@
+<%= question_header(@question) %>
+<%= form_with model: [:admin, @question], local: true do |form| %>
+  <%= render 'shared/errors', resource: @question %>
+  <p>
+    <%= form.label :body %>
+    <%= form.text_field :body, id: :question_body %>
+  </p>
+
+  <%= form.submit %>
+  <%= link_to  "К тесту", admin_tests_path, method: :get %>
+<% end %>
