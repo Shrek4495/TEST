@@ -1,19 +1,22 @@
 <%= test_header(@test) %>
-  <%= form_with model: [:admin, @test], local: true do |form| %>
-    <%= render 'shared/errors', resource: @test %>
-    <p>
-      <%= form.label :title %>
-      <%= form.text_field :title, id: :test_title %>
-    </p>
-    <p>
-      <%= form.label :level %>
-      <%= form.number_field :level, id: :test_level, min: 1 %>
-    </p>
-    <p>
-      <%= form.label :category_id %>
-      <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-    </p>
+<%= form_with model: [:admin, @test], local: true do |form| %>
+  <%= render 'shared/errors', resource: @test %>
+  <p>
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :test_title %>
+  </p>
 
-    <%= form.submit %>
-    <%= link_to  "К тестам", admin_tests_path, method: :get %>
-  <% end %>
+  <p>
+    <%= form.label :level %>
+    <%= form.number_field :level, id: :test_level, min: 1 %>
+  </p>
+
+  <p>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </p>
+
+
+  <%= form.submit %>
+  <%= link_to  "К тестам", admin_tests_path, method: :get %>
+<% end %>

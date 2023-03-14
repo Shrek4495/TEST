@@ -1,16 +1,12 @@
 <h1><%= @question.body %></h1>
 <% if @answers.present? %>
-  <table class="table table-bordered mt-3">
-    <thead>
+  <table>
     <tr>
-      <th scope="col">Название</th>
-      <th scope="col">Корректность</th>
-      <th colspan="2">Действия</th>
+      <th>Название</th>
+      <th>Корректность</th>
+      <th colspan="3">Действия</th>
     </tr>
-    </thead>
-    <tbody>
     <%= render @answers %>
-    </tbody>
   </table>
 <% else %>
   <p>Нет доступных ответов для теста</p>

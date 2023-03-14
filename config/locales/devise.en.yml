@@ -1,3 +1,5 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
 en:
   devise:
     confirmations:
@@ -42,24 +44,11 @@ en:
       signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
       updated: "Your account has been updated successfully."
-      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
-      new:
-        first_name: "First Name"
-        last_name: "Last Name"
-        password: "Password"
-        password_confirmation: "Password Confirmation"
-        sign_up: "Sign Up"
+      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
-      new:
-        password: "Password"
-        remember_me: "Remember me"
-        log_in: "Log in"
-    shared:
-      links:
-        sign_up: "Sign Up"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."

@@ -1,8 +1,8 @@
 <tr>
-  <td scope="row"><%= link_to test.title, admin_test_path(test), method: :get %></td>
+  <td><%= link_to test.title, admin_test_path(test), method: :get %></td>
   <td><%= test.level %></td>
   <td><%= test.author&.email %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to  t(".edit"), edit_admin_test_path(test), method: :get %> </td>
-  <td><%= button_to  t(".delete"), admin_test_path(test), method: :delete, data: {confirm: 'Вы уверены?'} %>
+  <td><%= link_to  "Изменить", edit_admin_test_path(test), method: :get %> </td>
+  <td><%= link_to  "Удалить", admin_test_path(test),  data: { turbo_method: "delete", turbo_confirm: 'Вы уверены?'} %>
 </tr>
