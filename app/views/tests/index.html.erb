@@ -1,12 +1,9 @@
-<h1><%= t('.header')%></h1>
-  <table class="table table-bordered mt-3">
-    <thead>
-    <tr>
-      <th scope="col"><%= t('.title') %></th>
-      <th scope="col"><%= t('.level') %></th>
-      <th scope="col"><%= t('.question_count') %></th>
-      <th scope="col"><%= t('.actions') %></th>
-    </tr>
-    </thead>
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Уровень</th>
+    <th>Количество вопросов</th>
+    <th>Действия</th>
+  </tr>
   <%= render @tests %>
 </table>
