@@ -1,6 +1,6 @@
 <tr>
-  <td scope="row"> <%= answer.body %> </td>
+  <td> <%= answer.body %> </td>
   <td> <%= answer.correct ? 'Верный' : 'Не верный' %></td>
   <td> <%= link_to  "Изменить", edit_admin_answer_path(answer), method: :get %> </td>
-  <td> <%= link_to  "Удалить", admin_answer_path(answer), data: { method: delete, confirm: 'Вы уверены?'} %> </td>
+  <td> <%= link_to  "Удалить", admin_answer_path(answer), data: { turbo_method: "delete", turbo_confirm: 'Вы уверены?'} %> </td>
 </tr>
