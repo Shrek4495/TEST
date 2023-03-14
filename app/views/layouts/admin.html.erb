@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testguru</title>
+  <title>Admin Panel | Testguru</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_importmap_tags %>
 </head>
 
 <body>
-
-<%= render 'shared/header' %>
+<%= render 'admin/admin_header' %>
 <%= render 'shared/flash' %>
 <div class="main-content"><%= yield %></div>
 <%= render 'shared/footer' %>

@@ -1,5 +1,4 @@
-class QuestionsController < ApplicationController
-  before_action :authenticate_user!
+class Admin::QuestionsController < Admin::BaseController
   before_action :find_test, only: %i[new create]
   before_action :find_question, only: %i[destroy show update edit]
 
@@ -10,13 +9,15 @@ class QuestionsController < ApplicationController
   end
   def edit; end
 
-  def show; end
+  def show
+    @answers = @question.answers
+  end
 
 
   def destroy
 
     @question.destroy
-    redirect_to tests_path
+    redirect_to admin_tests_path
   end
 
   def update

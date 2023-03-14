@@ -1,0 +1,15 @@
+<%= answer_header(@answer) %>
+<%= form_with model: [:admin, @question, @answer], local: true do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
+  <p>
+    <%= form.label :body %>
+    <%= form.text_field :body, id: :answer_body %>
+  </p>
+  <p>
+    <%= form.label 'Верный' %>
+    <%= form.radio_button :correct, id: :answer_correct %>
+  </p>
+
+  <%= form.submit %>
+  <%= link_to  "К вопросу", admin_question_path(@answer.question), method: :get %>
+<% end %>

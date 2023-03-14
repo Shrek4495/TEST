@@ -1,11 +1,11 @@
 <header>
   <div class="title">
-    <%= link_to  'Testguru', tests_path, method: :get %>
+    <%= link_to  'Testguru | Admin Panel', admin_tests_path, method: :get %>
   </div>
   <div class="right-nav-bar">
     <% if user_signed_in? %>
       <p>Добро пожаловать, <b><%= current_user.email %></b>|
-        <%= link_to  'Выйти', destroy_user_session_path, method: :delete %></p>
+        <%= button_to  "Выйти", destroy_user_session_path, method: :delete %></p>
     <% else %>
       <%= link_to  'Зарегистрироваться', new_user_registration_path %>
     <% end %>

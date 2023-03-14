@@ -1,5 +1,5 @@
 <%= test_header(@test) %>
-<%= form_with model: @test, local: true do |form| %>
+<%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
   <p>
     <%= form.label :title %>
@@ -16,11 +16,7 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
 
-  <p>
-    <%= form.label :author_id %>
-    <%= form.collection_select :author_id, User.all, :id, :name, prompt: true %>
-  </p>
 
   <%= form.submit %>
-  <%= link_to  "К тестам", tests_path, method: :get %>
+  <%= link_to  "К тестам", admin_tests_path, method: :get %>
 <% end %>
