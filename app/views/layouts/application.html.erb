@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no ">
+
   <title>Testguru</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 </head>
 
 <body>
 
 <%= render 'shared/header' %>
-<%= render 'shared/flash' %>
-<div class="main-content"><%= yield %></div>
+<div class="container">
+  <%= render 'shared/flash' %>
+  <%= yield %>
+</div>
 <%= render 'shared/footer' %>
 </body>
 </html>
