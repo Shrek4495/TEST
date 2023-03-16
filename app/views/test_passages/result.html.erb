@@ -1,4 +1,4 @@
-<h1>Тест <%= @test_passage.test.title %> завершен</h1>
+<h1><%= t('.header', title: @test_passage.test.title)%></h1>
 <p>
   Количество правильных ответов: <%= @test_passage.correct_questions %>
   из <%= @test_passage.test.questions.count %>
