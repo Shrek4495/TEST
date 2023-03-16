@@ -1,5 +1,6 @@
 ru:
   hello: "Привет мир"
+
   helpers:
     select:
       prompt: 'Выберите категорию'
@@ -12,19 +13,19 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+
   shared:
     header:
       logout: "Выйти"
-      log_in: "Войти"
       sign_up: "Зарегистрироваться"
       welcome: "Добро пожаловать, %{email} "
-      admin_panel: "Панель Администратора"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+
   tests:
     index:
       header: "Доступные тесты"
@@ -35,12 +36,11 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
-      gist:
-        success: "%{gist_link} успешно сохранен "
-        failure: "Во время сохранения gist произошла ошибка"
+
   admin:
     tests:
       create:
@@ -62,14 +62,7 @@ ru:
       welcome: "Добро пожаловать, %{email} "
       log_in: "Войти"
       admin_panel: "Панель Администратора"
-      gists: "Gists"
-    gists:
-          question: 'Вопрос'
-          gist_link: 'Гист URL'
-          user: 'Пользователь'
 
   tests_mailer:
     completed_test:
       subject: "Вы только что завершили тест на ТестГуру!"
-
-    question: "Вопрос %{question}"
