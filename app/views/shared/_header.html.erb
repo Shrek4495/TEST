@@ -1,13 +1,17 @@
-<header>
-  <div class="title">
-    <%= link_to  'Testguru', tests_path, method: :get %>
-  </div>
-  <div class="right-nav-bar">
+<nav class="navbar navbar-light bg-light">
+<h1>
+  <%= link_to  "Testguru", tests_path, class: 'navbar-brand'%>
+  <% if current_user&.admin? %>
+    <span class="badge badge-secondary"><%= link_to  t('.admin_panel'), admin_tests_path, class: 'navbar-brand'%></span>
+  <% end %>
+</h1>
+<span class="navbar-text">
     <% if user_signed_in? %>
-      <p>Добро пожаловать, <b><%= current_user.email %></b>|
-        <%= link_to  'Выйти', destroy_user_session_path, method: :delete %></p>
+       <%= t('.welcome', email: current_user.email) %></b> |
+    <%= button_to  t('.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to  'Зарегистрироваться', new_user_registration_path %>
+      <%= link_to  t('.log_in'), new_user_session_path %></b> |
+    <%= link_to  t('.sign_up'), new_user_registration_path %>
     <% end %>
-  </div>
-</header>
+ </span>
+</nav>

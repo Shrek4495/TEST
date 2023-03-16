@@ -8,7 +8,7 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
-
+gem 'rails-i18n'
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -32,7 +32,8 @@ gem "jbuilder"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
-
+gem 'jquery-rails'
+gem 'bootstrap'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 #gem "bcrypt"
 
@@ -43,6 +44,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'sass-rails'
 gem 'devise'
+gem "therubyracer"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -71,5 +73,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'bootstrap', '~> 5.1.3'
+
+
 end
+
+gem "cssbundling-rails", "~> 1.1"
+
+gem "jsbundling-rails", "~> 1.1"
