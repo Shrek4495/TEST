@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 html{
     height: 100%;
 }
@@ -22,10 +21,10 @@ body{
     flex-direction: column;
     height: 100%;
 }
-
 header{
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 0 0 auto;
+    min-height: 4em;
     text-align: center;
     background-color: peachpuff;
 }
@@ -46,17 +45,27 @@ footer {
     background-color: #730E15;
     color: #EFEFEF;
 }
-
 a {
     text-decoration: none;
     color:black
 }
-
 a:hover {
     color: darksalmon;
 }
-
 footer a {
     text-decoration: none;
     color: #EFEFEF;
+}
+
+.title {
+    text-align: left;
+    padding-left: 1em;
+    margin-top: 15px;
+    position: absolute;
+    font-size: 2em;
+}
+.right-nav-bar {
+    text-align: right;
+    margin-right: 2em;
+    margin-top:25px;
 }
