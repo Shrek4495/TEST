@@ -1,0 +1,67 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    select:
+      prompt: 'Выберите категорию'
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    header:
+      logout: "Выйти"
+      sign_up: "Зарегистрироваться"
+      welcome: "Добро пожаловать %{email} "
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      author: "Автор"
+      question_count: "Количество вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен"
+
+  admin:
+    tests:
+      create:
+        success: "Тест создан"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        author: "Автор"
+        question_count: "Количество вопросов"
+        actions: "Действия"
+        add_test: "Добавить тест"
+      test:
+        edit: "Изменить"
+        delete: "Удалить"
+    admin_header:
+      logout: "Выйти"
+      sign_up: "Зарегистрироваться"
+      welcome: "Добро пожаловать %{email} "
+      admin_panel: "Панель Администратора"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что завершили тест на ТестГуру!"

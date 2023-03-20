@@ -1,0 +1,5 @@
+<tr>
+  <td> <%= link_to question.body, admin_question_path(question), method: :get %> </td>
+  <td> <%= link_to  "Изменить", edit_admin_question_path(question), method: :get %> </td>
+  <td> <%= button_to  "Удалить", admin_question_path(question), method: :delete, data: {confirm: 'Вы уверены?'} %> </td>
+</tr>
