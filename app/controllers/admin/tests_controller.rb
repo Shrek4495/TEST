@@ -1,5 +1,4 @@
 class Admin::TestsController < Admin::BaseController
-  # before_action :authenticate_user!
   before_action :find_test, only: %i[destroy update show edit]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
@@ -30,7 +29,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to @test
+      redirect_to [:admin, @test]
     else
       render :edit
     end

@@ -1,6 +1,5 @@
 en:
   hello: "Hello world"
-
   helpers:
     select:
       prompt: 'Select category'
@@ -13,18 +12,17 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
-
   shared:
     header:
       logout: "Logout"
       sign_up: "Sign Up"
-      welcome: "Welcome %{email} "
+      welcome: "Welcome, %{email} "
+      log_in: "Log In"
+      admin_panel: "Admin Panel"
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
-
-
   tests:
     index:
       header: "Tricky Tests"
@@ -35,11 +33,12 @@ en:
       actions: "Actions"
     test:
       start: "Start"
-
   test_passages:
     result:
       header: "Test %{title} was completed"
-
+      gist:
+        success: "%{gist_link} was successfully created "
+        failure: "An error occurred while saving gist"
   admin:
     tests:
       create:
@@ -58,9 +57,17 @@ en:
     admin_header:
       logout: "Logout"
       sign_up: "Sign Up"
-      welcome: "Welcome %{email} "
+      welcome: "Welcome, %{email} "
+      log_in: "Log In"
       admin_panel: "Admin Panel"
+      gists: "Gists"
+    gists:
+          question: 'Question'
+          gist_link: 'Gist URL'
+          user: 'User'
 
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+    question: "Question %{question}"

@@ -1,5 +1,5 @@
 <tr>
-  <td><%= link_to test.title, admin_test_path(test), method: :get %></td>
+  <td scope="row"><%= link_to test.title, admin_test_path(test), method: :get %></td>
   <td><%= test.level %></td>
   <td><%= test.author&.email %></td>
   <td><%= test.questions.count %></td>
