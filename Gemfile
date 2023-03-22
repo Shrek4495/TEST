@@ -19,29 +19,28 @@ gem 'rails-i18n'
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails", '~> 1.0.0'
-
+gem "turbo-rails", '~> 1.4.0'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-
+gem 'jsbundling-rails'
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 gem 'faraday-retry'
 
-
+gem 'bootstrap', '~> 5.2.2'
 
 gem 'dotenv-rails'
 gem 'octokit', '~> 4.0'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
-
+gem 'octicons'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 #gem "bcrypt"
-
+gem 'octicons_helper'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -50,7 +49,7 @@ gem "bootsnap", require: false
 gem 'sass-rails'
 # Use Sass to process CSS
 # gem "sassc-rails"
-
+gem 'jquery-rails'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -65,7 +64,7 @@ group :development do
   gem "letter_opener"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-  gem 'bootstrap', '~> 5.1.3'
+
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end

@@ -28,6 +28,8 @@
   <div class="field">
     <%= f.label t('.password_confirmation') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= octicon 'x-circle', class: 'text-danger hide' %>
+    <%= octicon 'check-circle', class: 'text-success hide' %>
   </div>
 
   <div class="actions">
