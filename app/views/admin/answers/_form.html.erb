@@ -7,7 +7,11 @@
   </p>
   <p>
     <%= form.label 'Верный' %>
-    <%= form.radio_button :correct, id: :answer_correct %>
+    <%= form.radio_button :correct, true %>
+  </p>
+  <p>
+    <%= form.label 'Не верный' %>
+    <%= form.radio_button :correct, false %>
   </p>
 
   <%= form.submit %>
