@@ -1,6 +1,5 @@
 ru:
   hello: "Привет мир"
-
   helpers:
     select:
       prompt: 'Выберите категорию'
@@ -13,19 +12,20 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
-
   shared:
     header:
       logout: "Выйти"
+      log_in: "Войти"
       sign_up: "Зарегистрироваться"
       welcome: "Добро пожаловать, %{email} "
+      admin_panel: "Панель Администратора"
+      feedback: "Оставь обратную связь"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
-
   tests:
     index:
       header: "Доступные тесты"
@@ -37,10 +37,18 @@ ru:
     test:
       start: "Начать"
 
+      feedback_forms:
+        new:
+          feedback_form: 'Форма обратной связи'
+        create:
+          success: "Ваш отзыв направлен администратору"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
-
+      gist:
+        success: "%{gist_link} успешно сохранен "
+        failure: "Во время сохранения gist произошла ошибка"
   admin:
     tests:
       create:
@@ -53,16 +61,28 @@ ru:
         question_count: "Количество вопросов"
         actions: "Действия"
         add_test: "Добавить тест"
+      form_inline:
+        submit: "Ок"
       test:
         edit: "Изменить"
         delete: "Удалить"
+        show: "Показать"
+      show:
+        edit: "Редактировать"
     admin_header:
       logout: "Выйти"
       sign_up: "Зарегистрироваться"
       welcome: "Добро пожаловать, %{email} "
       log_in: "Войти"
       admin_panel: "Панель Администратора"
+      gists: "Gists"
+    gists:
+          question: 'Вопрос'
+          gist_link: 'Гист URL'
+          user: 'Пользователь'
 
   tests_mailer:
     completed_test:
       subject: "Вы только что завершили тест на ТестГуру!"
+
+    question: "Вопрос %{question}"

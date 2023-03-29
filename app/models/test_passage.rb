@@ -14,6 +14,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def progress
+    (current_question_index.to_f / test.questions.count * 100).round
+  end
+
   def completed?
     current_question.nil?
   end
