@@ -19,6 +19,7 @@ ru:
       sign_up: "Зарегистрироваться"
       welcome: "Добро пожаловать, %{email} "
       admin_panel: "Панель Администратора"
+      feedback: "Оставь обратную связь"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -35,6 +36,13 @@ ru:
       actions: "Действия"
     test:
       start: "Начать"
+
+      feedback_forms:
+        new:
+          feedback_form: 'Форма обратной связи'
+        create:
+          success: "Ваш отзыв направлен администратору"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
@@ -53,9 +61,14 @@ ru:
         question_count: "Количество вопросов"
         actions: "Действия"
         add_test: "Добавить тест"
+      form_inline:
+        submit: "Ок"
       test:
         edit: "Изменить"
         delete: "Удалить"
+        show: "Показать"
+      show:
+        edit: "Редактировать"
     admin_header:
       logout: "Выйти"
       sign_up: "Зарегистрироваться"

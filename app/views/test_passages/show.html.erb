@@ -1,4 +1,8 @@
 <h1>Прохождение теста <%= @test_passage.test.title %></h1>
+<div class="progress">
+  <%= content_tag :div, class: 'progress-bar', data: { progress: @test_passage.progress} do %>
+  <% end %>
+</div>
 <p>Вопрос: <%= "#{@test_passage.current_question_index} из #{@test_passage.test.questions.count} "%></p>
 <p>
   <%= @test_passage.current_question.body %>

@@ -18,8 +18,11 @@ Rails.application.routes.draw do
   end
   end
 
+  resources :feedback_forms, only: %i[new create]
+
   namespace :admin do
     resources :tests do
+      patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index
       end
