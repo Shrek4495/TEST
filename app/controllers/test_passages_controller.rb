@@ -4,6 +4,9 @@ class TestPassagesController < ApplicationController
   def show; end
   def create; end
   def result; end
+
+
+
   def gist
     request = GistQuestionService.new(@test_passage.current_question)
     request_result = request.call
