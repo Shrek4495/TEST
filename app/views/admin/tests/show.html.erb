@@ -12,5 +12,7 @@
 <% else %>
   <p>Нет доступных вопросов для теста</p>
 <% end %>
+<%= link_to  t(".edit"), edit_admin_test_path(@test) %>
 <%= link_to  "Назад к тестам", admin_tests_path, method: :get %>
-<%= link_to  "Добавить вопрос", new_admin_test_path(@test)%>
+
+<%= link_to  "Добавить вопрос", new_admin_test_question_path(@test)%>
