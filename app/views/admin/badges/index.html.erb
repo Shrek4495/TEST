@@ -1,0 +1,15 @@
+<h1><%= t('.badges')%></h1>
+<%= link_to  t('.add_badge'), new_admin_badge_path %>
+<table class="table table-bordered mt-3">
+  <thead>
+  <tr>
+    <th scope="col"><%= t('.name') %></th>
+    <th scope="col"><%= t('.file') %></th>
+    <th scope="col"><%= t('.reason') %></th>
+    <th colspan="2"><%= t('.actions') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @badges %>
+  </tbody>
+</table>
