@@ -12,6 +12,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        time: "Test Time"
   shared:
     header:
       logout: "Logout"
@@ -31,6 +32,7 @@ en:
       author: "Author"
       question_count: "Question Count"
       actions: "Actions"
+      time: "Test Time"
     test:
       start: "Start"
   test_passages:
@@ -51,6 +53,7 @@ en:
         question_count: "Question Count"
         actions: "Actions"
         add_test: "Add test"
+        time: "Test Time"
       test:
         edit: "Edit"
         delete: "Delete"

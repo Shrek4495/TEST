@@ -20,14 +20,18 @@ class TestPassagesController < ApplicationController
     end
   end
   def update
-    @test_passage.accept!(params[:answers_ids])
-    if @test_passage.completed?
-      TestsMailer.completed_test(@test_passage).deliver_now
-      redirect_to result_test_passage_path(@test_passage)
-    else
-      render :show
+      if params[:answers_ids].nil?
+        redirect_to result_test_passage_path(@test_passage)
+      else
+        @test_passage.accept!(params[:answers_ids])
+        if @test_passage.completed?
+          TestsMailer.completed_test(@test_passage).deliver_now
+          redirect_to result_test_passage_path(@test_passage)
+        else
+          render :show
+        end
+      end
     end
-  end
   private
   def find_test_passage
     @test_passage = TestPassage.find(params[:id])

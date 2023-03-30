@@ -1,10 +1,23 @@
 <h1>Прохождение теста <%= @test_passage.test.title %></h1>
+<div class="card shadow-sm mt-4">
+  <div class="card-header">
+    <b>До конца теста осталось</b>
+  </div>
+  <div class="card-body">
+    <%= content_tag :h1, class: 'text-center timer', data: { time: @test_passage.end_of_test_time } do %>
+      <span class="minutes"></span>:<span class="seconds"></span>
+    <% end %>
+  </div>
+</div>
+<div class="progress">
+  <%= content_tag :div, class: 'progress-bar', data: { progress: @test_passage.progress} do %>
+  <% end %>
+</div>
 <p>Вопрос: <%= "#{@test_passage.current_question_index} из #{@test_passage.test.questions.count} "%></p>
 <p>
   <%= @test_passage.current_question.body %>
 </p>
-
-<%= form_with url: test_passage_path(@test_passage), local: true,  method: :put do |form| %>
+<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answers_ids, @test_passage.current_question.answers,
                                   :id, :body, include_hidden: false do |b| %>
     <p>
@@ -13,5 +26,5 @@
     </p>
   <% end %>
   <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
-  <p><%= form.submit 'Следующий',data: { turbo: false } %></p>
+  <p><%= form.submit 'Следующий' %></p>
 <% end %>

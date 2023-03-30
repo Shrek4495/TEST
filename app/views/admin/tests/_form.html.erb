@@ -14,6 +14,11 @@
       <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
     </p>
 
+  <p>
+    <%= form.label :time %>
+    <%= form.number_field :time, id: :test_time %>
+  </p>
+
     <%= form.submit %>
     <%= link_to  "К тестам", admin_tests_path, method: :get %>
   <% end %>

@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   end
   end
 
+  resources :badges, only: :index
+  resources :feedback_forms, only: %i[new create]
+
   namespace :admin do
     resources :tests do
       resources :questions, shallow: true, except: :index do
@@ -25,6 +28,7 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges, except: :show
   end
 
 end
