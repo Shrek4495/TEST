@@ -1,0 +1,10 @@
+<tr>
+  <td scope="row"><%= badge.name %></td>
+  <td ><img src="<%= badge.file %>" class="img-thumbnail rounded-circle"
+            width="100" height="100"></td>
+  <td scope="row"><%= badge.reason %></td>
+  <td class="aligh-middle">
+    <%= link_to  t(".edit"), edit_admin_badge_path(badge) %>
+  </td>
+  <td class="aligh-middle"><%= link_to  t(".delete"), admin_badge_path(badge), method: :delete, data: {confirm: 'Вы уверены?'} %>
+</tr>
