@@ -1,22 +1,21 @@
 Rails.application.routes.draw do
-
   root 'tests#index'
-
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
-
   resources :tests, only: :index do
     member do
       post :start
     end
   end
-
   resources :test_passages, only: %i[show update] do
     member do
-    get :result
+      get :result
+      post :gist
     end
   end
 
   resources :feedback_forms, only: %i[new create]
+
+  resources :badges, only: :index
 
   namespace :admin do
     resources :tests do
@@ -25,7 +24,7 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+    resources :gists, only: :index
+    resources :badges, except: :show
   end
-
-
 end

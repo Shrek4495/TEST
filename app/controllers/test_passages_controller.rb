@@ -4,17 +4,12 @@ class TestPassagesController < ApplicationController
   def show; end
   def create; end
   def result; end
-
-
-
   def gist
     request = GistQuestionService.new(@test_passage.current_question)
     request_result = request.call
     response = request.client.last_response
     gist_link = request_result.html_url
-
     redirect_to @test_passage
-
     if gist_link.present? && response.status.eql?(201)
       current_user.gists.create(question: @test_passage.current_question, gist_url: gist_link)
       flash[:notice] = t('.success', gist_link: view_context.link_to('Gist', gist_link))
@@ -25,6 +20,8 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answers_ids])
     if @test_passage.completed?
+      @badges = BadgeIssuance.new(@test_passage).give_badges
+      @test_passage.user.badges.push(@badges) if @badges.present?
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else

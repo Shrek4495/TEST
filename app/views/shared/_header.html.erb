@@ -5,6 +5,7 @@
       <span class="badge badge-secondary"><%= link_to  t('.admin_panel'), admin_tests_path, class: 'navbar-brand'%></span>
     <% end %>
     <%= link_to t('.feedback'), new_feedback_form_path, class: 'navbar-brand' %>
+    <%= link_to t('.badge'), badges_path, class: 'navbar-brand' %>
   </h1>
   <span class="navbar-text">
       <% if user_signed_in? %>

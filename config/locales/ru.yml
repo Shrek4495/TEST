@@ -1,5 +1,10 @@
 ru:
+  rules:
+    category: 'Категория'
+    first_try: 'C первой попытки'
+    level: 'Уровень'
   hello: "Привет мир"
+
   helpers:
     select:
       prompt: 'Выберите категорию'
@@ -20,6 +25,7 @@ ru:
       welcome: "Добро пожаловать, %{email} "
       admin_panel: "Панель Администратора"
       feedback: "Оставь обратную связь"
+      badge: "Посмотреть заработанные бейджи"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -37,18 +43,25 @@ ru:
     test:
       start: "Начать"
 
-      feedback_forms:
-        new:
-          feedback_form: 'Форма обратной связи'
-        create:
-          success: "Ваш отзыв направлен администратору"
+  badges:
+    index:
+      header: "Ваши бейджи"
+      name: "Название"
+      file: "Изображение"
+      badges: "Все бейджи"
+      reason: "Причина"
 
+  feedback_forms:
+    new:
+      feedback_form: 'Форма обратной связи'
+    create:
+      success: "Ваш отзыв направлен администратору"
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
-      gist:
-        success: "%{gist_link} успешно сохранен "
-        failure: "Во время сохранения gist произошла ошибка"
+    gist:
+      success: "%{gist_link} успешно сохранен "
+      failure: "Во время сохранения gist произошла ошибка"
   admin:
     tests:
       create:
@@ -75,14 +88,29 @@ ru:
       welcome: "Добро пожаловать, %{email} "
       log_in: "Войти"
       admin_panel: "Панель Администратора"
+      badge: "Редактировать Бейджи"
       gists: "Gists"
     gists:
-          question: 'Вопрос'
-          gist_link: 'Гист URL'
-          user: 'Пользователь'
+      question: 'Вопрос'
+      gist_link: 'Гист URL'
+      user: 'Пользователь'
+    badges:
+      index:
+        badges: "Все Бейджи"
+        name: "Название"
+        file: "Изображение"
+        reason: "Причина"
+        actions: "Действия"
+        add_badge: "Создать Бейдж"
+      badge:
+        edit: "Редактировать"
+        delete: "Удалить"
+      create:
+        success: "Бэйдж Создан"
+      form:
+        badges: "К бейджам"
 
   tests_mailer:
     completed_test:
       subject: "Вы только что завершили тест на ТестГуру!"
-
-    question: "Вопрос %{question}"
+  question: "Вопрос %{question}"
