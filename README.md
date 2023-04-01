@@ -8,7 +8,5 @@ application up and running.
 
 * Ruby version 3.0.0
 
- 
-
 * Database initialization PostgreSQL
-Приложение для прохождения тестов
+
